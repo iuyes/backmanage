@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<link href="http://threedubmedia.com/inc/img/favicon.ico" rel="shortcut icon" />
+<link href="http://threedubmedia.com/inc/css/base.css" rel="stylesheet" />
+<!--
+<script src="http://threedubmedia.com/inc/js/jquery-1.7.2.js"></script>
+<script src="http://threedubmedia.com/inc/js/jquery.event.drag-2.2.js"></script>
+
+<script src="http://threedubmedia.com/inc/js/jquery.event.drag.live-2.2.js"></script>
+<script src="http://threedubmedia.com/inc/js/jquery.event.drop-2.2.js"></script>
+<script src="http://threedubmedia.com/inc/js/jquery.event.drop.live-2.2.js"></script>
+<script src="http://threedubmedia.com/inc/js/excanvas.min.js"></script>
+-->
+<script src="/ABC-demo/assets/libs/seajs/2.1.1/sea.js?t=201308301020"></script>
+<script src="/ABC-demo/assets/biz/seajs-config.js?t=201308301020"></script>
+<title>ThreeDubMedia &middot; jquery.event.drag</title>
+</head>
+<body>
+
+
+<h1>Contain Drag Demo</h1>
+<p>Drag the boxes around the screen, they remain confined within the dashed line.</p>
+<div id="container"></div>
+<div class="drag" style="left:40px;"></div>
+<div class="drag" style="left:120px;"></div>
+<div class="drag" style="left:200px;"></div>
+
+<style type="text/css">
+.drag {
+	position: absolute;
+	border: 1px solid #89B;
+	background: #BCE;
+	height: 58px;
+	width: 58px;
+	cursor: move;
+	top: 120px;
+	}
+#container {
+	height: 299px;
+	border: 1px dashed #888;
+	}
+</style></body>
+
+ <script>
+
+ seajs.use(['$','biz/component/plugin.event.drag'],function($,drag){
+
+        drag($);
+
+
+        var $w = $(window);
+        console.log($w.width())
+        var $div = $("#container");
+
+    $('.drag').drag("start",function( ev, dd ){
+            dd.limit = $div.offset();
+            dd.limit.bottom = dd.limit.top + $div.outerHeight() - $( this ).outerHeight();
+            dd.limit.right = dd.limit.left + $div.outerWidth() - $( this ).outerWidth();
+            console.log(dd.limit.bottom)
+        }).drag(function( ev, dd ){
+            $( this ).css({
+               top: Math.min( dd.limit.bottom, Math.max( dd.limit.top, dd.offsetY ) ),
+                left: Math.min( dd.limit.right, Math.max( dd.limit.left, dd.offsetX ) )
+            });   
+        });
+
+
+ });
+ </script>
+
+</html>

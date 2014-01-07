@@ -1,0 +1,55 @@
+
+/*选择分类样式 siwei.ransw@aliyun-inc.com*/
+
+.catetory-i {
+	padding: 10px;
+}
+.catetory-i h3.title{ font: 100 14px/20px "Microsoft YaHei", SimHei; border-bottom: 1px solid #eee; line-height: 20px; padding: 5px 0; color: #08c; margin-bottom: 5px }
+.catetory-i h3.title b{ font-weight: 100;  padding: 0 5px 0 0}
+
+.catetory-i{ }
+.catetory-i ul{width: 150px; position: relative;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; 
+-webkit-box-shadow:0 1px 4px rgba(0,0,0,.065);box-shadow:0 1px 4px rgba(0,0,0,.065);-moz-box-shadow:0 1px 4px rgba(0,0,0,.065);}
+.catetory-i ul li{  line-height: 20px; }
+.catetory-i ul li a.stlink{ display: block; margin:0 0 -1px; padding: 8px 14px; border: 1px solid #e5e5e5; color: #08c; text-decoration: none;}
+.catetory-i ul li:first-child a{-webkit-border-radius: 4px 4px 0 0;-moz-border-radius: 4px 4px 0 0;border-radius: 4px 4px 0 0;}
+.catetory-i ul li:last-child a{-webkit-border-radius: 0 0 4px 4px;-moz-border-radius: 0 0 4px 4px;border-radius: 0 0 4px 4px;}
+.catetory-i ul li a.maintainHover{ background: #08c;text-shadow:0 -1px 0 rgba(0,0,0,0.2);color:#fff;-webkit-box-shadow:inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);}
+.catetory-i li .popover{
+ position: absolute;
+ font-weight: normal;
+ padding: 0px;
+  top:0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  width: 430px;
+  max-width: 430px;
+  /*
+   border:1px solid #e5e5e5;
+  -webkit-box-shadow:0 3px 5px rgba(0,0,0,0.2);
+  -moz-box-shadow:0 3px 5px rgba(0,0,0,0.2);
+  box-shadow:0 3px 5px rgba(0,0,0,0.2);
+  */
+  overflow:auto;
+}
+.catetory-i li .popover dl{padding: 5px 0;margin: 0 5px;border-bottom: 1px dotted #e5e5e5;color: #e5e5e5;line-height: 20px}
+.catetory-i li .popover dl a{text-decoration: none;}
+.catetory-i li .popover dl dt{font-size: 14px; font-weight: 100; padding: 3px 0}
+.catetory-i li .popover dl dt a{ color: #333}
+.catetory-i li .popover dl dd{ padding: 5px 0 0 5px}
+.catetory-i li .popover dl dd a{ font-size: 12px; margin: 0 5px; color: #666}
+.catetory-i .icon-chevron-right{float: right;
+margin-top: 2px;
+margin-right: -6px;
+opacity: .25;
+background-position: -456px -72px;
+display: inline-block;
+width: 14px;
+height: 14px;
+line-height: 14px;
+vertical-align: text-top;
+background-image: url("../images/glyphicons-halflings.png");
+background-repeat: no-repeat;
+}
+.catetory-i ul li a.maintainHover .icon-chevron-right{float: right;background-image: url("../images/glyphicons-halflings-white.png");opacity: 1;}

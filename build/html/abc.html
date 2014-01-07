@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>阿里云 - 业务支撑系统</title>
+<link href="/ABC-demo/assets/apps/abc/index/3.0/css/index.css?t=201308301020" rel="stylesheet" />
+<script src="/ABC-demo/assets/libs/seajs/2.1.1/sea.js?t=201308301020"></script>
+<script src="/ABC-demo/assets/apps/abc/index/3.0/seajs-config.js?t=201308301020"></script>
+
+</head>
+<body>
+
+<div class="wrap">
+    <table width="100%" height="100%" style="table-layout:fixed;">
+        <tr id="J_page_top" class="head compute-head">
+            <th><a href="$homeLink.setTarget('/')" class="logo">阿里云业务支撑系统</a></th>
+            <td>
+                <div class="nav">
+                    <!-- 菜单异步获取，采用json格式，由js处理菜单展示结构 -->
+                    <ul id="J_B_main_block"></ul>
+                </div>
+                <div class="login_info">
+                    <span class="mr10"><i></i>siwei.ransw</span>| <a href="#" class="mr10">注销</a>
+                </div>
+            </td>
+        </tr>
+
+        <tr id="J_page_tab" class="tab compute-tab">
+            <th valign="top">
+                <h2 class="subTitle" id="subTitlec"></h2>
+            </th>
+
+           <td id="J_tabView" valign="top">
+           
+                <!--
+                <div id="B_tabA" class="tabA">
+                    <a href="" tabindex="-1" class="tabA_pre" id="J_prev" title="上一页">上一页</a>
+                    <a href="" tabindex="-1" class="tabA_next" id="J_next" title="下一页">下一页</a>
+                    
+                    <div style="margin:0 25px;min-height:1px;">
+                        <div style="position:relative;height:30px;width:100%;overflow:hidden;">
+                            <ul id="B_history" style="white-space:nowrap;position:absolute;left:0;top:0;">
+                                <li class="current" data-id="default" tabindex="0" data-path="后台首页"><span><a>后台首页</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                -->
+                
+                
+            </td>
+        </tr>
+
+        <tr class="content">
+            <th>
+                <div id="B_menunav">
+                    <div id="B_menubar" class="menubar" style="overflow:auto;">
+                        
+                    </div>
+                </div>
+            </th>
+
+            <td id="B_frame" class="J_frame_page" valign="top" style="width:500px;">
+                <div id="breadCrumb">后台首页</div>
+                <div class="options">
+                    <a href="#" class="refresh" id="J_refresh" title="刷新">刷新</a>
+                    <a href="#" id="J_fullScreen" class="full_screen" title="全屏">全屏</a>
+                </div>
+                <div class="loading" id="loading">加载中...</div>
+                 <!--
+                <iframe id="iframe_default" src="${homeUrl}" height="100%" width="100%" style="display:none;" data-id="default" frameborder="0" scrolling="auto"></iframe>
+               
+                <iframe id="iframe_default" src="text.html" height="100%" width="100%" style="display:none;" data-id="default" frameborder="0" scrolling="auto"></iframe>
+            -->
+            </td>
+        </tr>
+
+        <tr id="J_page_foot"></tr>
+
+
+    </table>
+</div>
+
+
+<script id="subContentTpl" type="text/template">
+<dl>
+    <% for (var i = 0 ,len = obj.length; i < len; i ++) { %>
+    <dt class="current J_sub_menu_title" data-role="trigger"><a href="#" hidefocus="true"><%= obj[i].name %><em></em></a></dt>
+    <% if (obj[i].items.length > 0) {%>
+    <dd class="J_sub_menu_content" data-role="panel">
+        <ul>
+            <% for (var j = 0 ,l = obj[i].items.length; j < l; j++) { %>
+            <li>
+                <% if (obj[i].items[j].isTargetBlank) { %>
+                <a href="<%=obj[i].items[j].url%>" target="_blank"><%= obj[i].items[j].name %></a>
+                <% } else { %>
+                <a class="J_menu_leaf" href="<%=obj[i].items[j].url%>" data-path="<%=obj[i].items[j].path%>" data-title="<%=obj[i].items[j].title%>" data-state="<%=obj[i].items[j].state%>" data-url="<%=obj[i].items[j].url%>"><%= obj[i].items[j].name %></a>
+                <% } %>
+            </li>
+            <% } %>
+        </ul> 
+    </dd>
+    <% } %>
+    <% } %>
+</dl>
+</script>
+
+<script id="topMenuTpl" type="text/template">
+    <li>
+       <a data-id='<%= menu.id %>' id="TM<%= menu.id %>" class="topMenuLists J_top_menu_trigger">
+          <em style="cursor:pointer"></em>
+          <span style="cursor:pointer"><%= menu.name %></span>
+       </a>
+       <div style="display:none" class="t-subMenu J_top_menu_popup">
+           <% for (var i = 0 ,l = menu.items.length; i < l; i++) { %>
+           <p data-menu-id="<%= menu.items[i].id%>" id="<%= menu.items[i].id%>"><a class="J_top_menu" data-menu-id="<%= menu.items[i].id%>" id="<%= menu.items[i].id%>" href="#"><%= menu.items[i].name %></a> </p>
+           <% } %>
+       </div>
+    </li>
+</script>
+
+
+<script>
+seajs.use(['apps/abc/index/3.0/main'], function(i){
+    i.init({
+            menuData:  [{
+                "id":"1",
+                "name":"客户中心",
+                "items":[{
+                    "id":"2",
+                    "name":"工单管理",
+                    "items":[
+                    {
+                        "id":"3",
+                        "name":"工单信息",
+                        "items":[{
+                            "id":"4",
+                            "name":"我的工单",
+                            "state":"on",
+                            "url": "./index.htm?type=my"
+                        }]
+                    },
+                    
+                    {
+                        "id":"5",
+                        "name":"配置管理",
+                        "items":[
+                            {
+                                "id":"6",
+                                "name":"产品管理",
+                                "state":"on",
+                                "url": "/product/index.htm"
+                            },
+                            {
+                                "id":"7",
+                                "name":"分类管理",
+                                "state":"on",
+                                "url": "/category/index.htm"
+                            },                       
+                            {
+                                "id":"8",
+                                "name":"配置表",
+                                "state":"on",
+                                "url": "/config/index.htm"
+                            },                       
+                            
+                            {
+                                "id":"9",
+                                "name":"责任田管理",
+                                "state":"on",
+                                "url": "/duty/index.htm"
+                            },
+                            
+                            {
+                                "id":"10",
+                                "name":"责任田超时管理",
+                                "state":"on",
+                                "url": "/duty/overtime.htm"
+                            }, 
+                            
+                            {
+                                "id":"11",
+                                "name":"责任田典型问题管理",
+                                "state":"on",
+                                "url": "/duty/typical_question.htm"
+                            },
+                            
+                            {
+                                "id":"12",
+                                "name":"用户组管理",
+                                "state":"on",
+                                "url": "/user/group.htm"
+                            },
+                            
+                            {
+                                "id":"13",
+                                "name":"用户管理",
+                                "state":"on",
+                                "url": "/user/index.htm"
+                            },
+                            
+                            {
+                                "id":"14",
+                                "name":"用户上下班管理",
+                                "state":"on",
+                                "url": "/issues/index.htm?type=my"
+                            },
+                            
+                            
+                        ]
+                    
+                    
+                    }
+                    
+                    
+                    ]
+                }]
+            }]   
+    });
+    
+    
+});
+</script>
+
+</body>
+</html>
