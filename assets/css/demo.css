@@ -1,0 +1,11 @@
+.highlight pre{
+	margin: 6px 0;
+border: 1px solid #eee;
+padding: 6px 10px;
+overflow: auto;
+border-radius: 2px;
+background-color: #f8f8f9;
+line-height: 19px;
+font-size: 13px;
+white-space: pre;
+}

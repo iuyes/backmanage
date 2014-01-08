@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<link href="/backmanage/assets/css/main.css?t=201311201212" rel="stylesheet" />
+<script src="/backmanage/assets/libs/seajs/2.1.1/sea.js?t=201308301020"></script>
+<script src="/backmanage/assets/biz/seajs-config.js?t=201308301020"></script>
+<link href="/backmanage/assets/css/demo.css?t=201311201212" rel="stylesheet" />
+<title>阿里云 - 商业中心</title>
+</head>
+<body>
+
+<div class="wrap pr" id="workerWrap">
+<dl>
+    <dt>1.<a href="#" id="J-normal-dialog">点击这里弹出</a></dt>
+    <dd>
+        <div class="highlight">
+<pre>
+    seajs.use(['dialog'],function(Dialog){
+        new Dialog({
+        trigger: '#J-normal-dialog',
+        height: '100px',
+        content: '这是个弹出框'
+        });
+    });
+</pre>
+        </div>
+    </dd>
+</dl>
+</div>
+
+
+ <script>
+
+ seajs.use(['dialog'],function(Dialog){
+    new Dialog({
+        trigger: '#J-normal-dialog',
+        height: '100px',
+        content: '这是个弹出框'
+    });
+
+ });
+ </script>
+</html>

@@ -4,14 +4,15 @@
 (function(){
 
     seajs.config({
-        base: '/ABC-demo/assets',
+        base: '/backmanage/assets',
         alias: {
             '$'             : 'gallery/jquery/1.10.2/jquery',
             '$-debug'       : 'gallery/jquery/1.10.2/jquery-debug',
             'jquery'        : 'gallery/jquery/1.10.2/jquery',
             'jquery-debug'  : 'gallery/jquery/1.10.2/jquery-debug',
-            'artTemplate'   : 'gallery/artTemplate/2.0/artTemplate',
-            'dialog'        : 'arale/dialog/1.1.3/dialog',
+            'artTemplate'   : 'gallery/artTemplate/2.0.2/artTemplate',
+            'dialog'        : 'arale/dialog/1.2.5/dialog',
+            'comfirmbox'    : 'arale/dialog/1.2.5/confirmbox-debug',
             'tabs'          : 'arale/switchable/1.0.2/tabs',
 
             '_'             : 'gallery/underscore/1.4.3/underscore',
@@ -27,7 +28,7 @@
         ],
 
         'map': [
-            [ /^(.*\.(?:css|js))(.*)$/i, '$1?201311303' ]
+            [ /^(.*\.(?:css|js))(.*)$/i, '$1?20140103' ]
         ]
 
 

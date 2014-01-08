@@ -1,3 +1,4 @@
+
 /*bubble*/
 .bubble-wrap { padding: 5px 0; overflow:hidden; *zoom:1; }
 .bubble-wrap li { padding: 5px 10px; color: #999999; clear:both; overflow:hidden; *zoom:1; vertical-align:middle;}
@@ -57,21 +58,11 @@ font-size: 12px;}
 	text-decoration: none;
 }
 .control-bar .content-block{ 
+	height: 345px;
 	width: 620px; 
 	position: absolute;
+	margin-bottom: -70px;
 	top:-345px;
-}
-.control-bar .content-block .min-max{
-	position: absolute;
-	width: 33px;
-	height: 21px;
-	background: url(../images/baricon.png?20131127) no-repeat;
-	right: 0;
-	top: -19px;
-}
-.control-bar .content-block .min-max a{
-	display: block;
-	text-indent: -9999em;
 }
 .control-bar .content-block .content-block-inner{
 	background:#a4c6ef; 
@@ -83,84 +74,6 @@ font-size: 12px;}
 }
 .control-bar .content-block .content-block-inner .in-content{
 	background: #fff;
-	height: 315px;
-	padding: 15px;
+	height: 345px;
 }
-.abc-communication h3,.abc-communication .r-dyu h3{
-	font-size: 14px;
-	padding: 5px 0 10px 0;
-}
-.abc-communication .l-leftform{
- width: 300px;
-}
-.abc-communication .r-dyu{
-	width: 260px;
-}
-.control-bar .submit-bar{
-	position: absolute;
-	 left: 15px;
-	 top: 27px;
-	 height: 30px;
-}
-.abc-send-record ul.send-tab{
-	position: absolute;
-	height: 40px;
-	left: 17px;
-	top:-35px;
-}
-.abc-send-record ul.send-tab li{
-	float: left;
-	height: 40px;
-	overflow: hidden;
-}
-.abc-send-record ul.send-tab li span{
-	display: block;
-		background: #a4c6ef;
-
-	-moz-border-radius: 5px 5px 0 0;
-	-khtml-border-radius: 5px 5px 0 0;
-	border-radius: 5px 5px 0 0; 
-	text-align: center;
-	padding: 5px 5px 0;
-	float: left;
-}
-.abc-send-record ul.send-tab li em{
-	background: url(../images/tabbg.png?20131127) right 0 no-repeat;
-	display: inline-block;
-	height: 40px;
-	width: 41px;
-	float: left;
-	margin-left: -5px;
-}
-.abc-send-record ul.send-tab li span b{
-	padding: 0 20px;
-	display: block;
-	height: 35px;
-	line-height: 35px;
-}
-.abc-send-record ul.send-tab li  a{
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	color: #fff;
-}
-.abc-send-record ul.send-tab li.current span b{
-	background: #fff;
-}
-.abc-send-record ul.send-tab li.current em{
-	background: url(../images/activebg.png?20131126) right 0 no-repeat;
-}
-.abc-send-record ul.send-tab li.current a{
-	color: #38679f;
-}
-.abc-send-content span.l-t{
-	display: inline-block;
-	width: 90px;
-	padding-right: 10px;
-	float: left;
-	text-align: right;
-}
-.abc-send-content span.txt{
-	display: inline-block;
-	float: left;
-}
+.control-bar .submit-bar{position: absolute; left: 15px; top: 27px; height: 30px;}

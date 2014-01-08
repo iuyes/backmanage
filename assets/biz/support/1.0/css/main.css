@@ -32,10 +32,17 @@ div {
 table {
 	border-collapse: collapse;
 	border-spacing:0;
+  table-layout:fixed;
 }
 th {
 	text-align: left;
 	font-weight:100;
+}
+td.title{
+  word-break:keep-all;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;/*显示省略标记(...)*/
 }
 ol li {
 	list-style: decimal outside;

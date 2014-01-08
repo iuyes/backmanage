@@ -106,15 +106,17 @@
 	if( $('a.J_dialog').length ) {
 		Wind.use('dialog',function() {
 			$('.J_dialog').on( 'click',function(e) {
+
 				e.preventDefault();
 				var _this = $(this);
 				Wind.dialog.open( $(this).prop('href') ,{
 					onClose : function() {
 						_this.focus();//关闭时让触发弹窗的元素获取焦点
 					},
-					title:_this.prop('title')
+					title:_this.prop('title'),
+					resize : false
 				});
-			}).attr('role','button');
+							}).attr('role','button');
 
 		});
 	}
@@ -138,7 +140,6 @@
 					form = $(this);*/
 				var btn = $(this),
 					form = btn.parents('form.J_ajaxForm');
-
 				//批量操作 判断选项
 				if(btn.data('subcheck')) {
 					btn.parent().find('span').remove();
@@ -204,14 +205,14 @@
 							$( '<span class="tips_success">' + data.message + '</span>' ).appendTo(btn.parent()).fadeIn('slow').delay( 1000 ).fadeOut(function() {
 								if (data.redirectUrl) {
 									//返回带跳转地址
-									if (window.parent.Wind.dialog) {
+									if (window.parent && typeof window.parent.Wind != 'undefined') {
 										//iframe弹出页
 										window.parent.location.href = data.redirectUrl;
 									} else {
 										window.location.href = data.redirectUrl;
 									}
 								} else {
-									if(window.parent.Wind.dialog) {
+									if (window.parent && typeof window.parent.Wind != 'undefined') {
 										reloadPage(window.parent);
 									} else {
 										reloadPage(window);

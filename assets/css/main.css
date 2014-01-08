@@ -2,8 +2,7 @@
 ===================
 @explain: 系统后台内容区域
 @copyright: Copyright 2012,phpwind.com
-@author: longwenid@gmail.com
-$Id: admin_style.css 20739 2012-11-06 07:41:57Z yanchixia $
+@不要随便修改这里的样式
 ===================
 */
 html,body, 
@@ -32,10 +31,18 @@ div {
 table {
 	border-collapse: collapse;
 	border-spacing:0;
+  table-layout:fixed;
 }
 th {
 	text-align: left;
 	font-weight:100;
+}
+td{
+  width:100%;
+  word-break:keep-all;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;/*显示省略标记(...)*/
 }
 ol li {
 	list-style: decimal outside;
@@ -96,6 +103,7 @@ section {
 	width:0;
 }
 
+
 /*
 ===================
 间距
@@ -155,6 +163,9 @@ section {
 * vt 表格内容靠上显示
 ===================
 */
+.dk{
+	display: block !important;
+}
 .b{
 	font-weight:700 !important;
 }
@@ -163,6 +174,9 @@ section {
 }
 .i{
 	font-style:italic !important;
+}
+.wn{
+	white-space:normal!important;
 }
 .w{
 	white-space:nowrap;
@@ -298,7 +312,7 @@ input::-moz-focus-inner {
 	border: 1px solid #c4c4c4;
 	border-radius: 2px;
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-	padding:4px 10px;
+	padding:2px 10px;
 	display: inline-block;
 	cursor: pointer;
 	font-size:100%;
@@ -562,8 +576,8 @@ select[size]{
 .pages a,
 .pages strong{
 	display:inline-block;
-	line-height:28px;
-	padding:0 10px;
+	line-height:24px;
+	padding:0 8px;
 	border:1px solid #d9d9d9;
 	background-color:#ffffff; 
 	text-decoration:none;
@@ -866,7 +880,8 @@ select[size]{
 ===================
 */
 body{
-	font-family:Arial;
+	/*font-family:Arial;*/
+	font-family: "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, "\5B8B\4F53" !important;
 	color:#333;
 	font-size:12px;
 	background:#f3f3f3;
@@ -1035,7 +1050,8 @@ tr.h_a td
 .table_list thead tr td,
 .table_list thead tr:hover td{
 	padding:8px 9px;
-	background-color:#f3f3f3;
+	background-color:#ebebeb;
+	font-weight: bold;
 	/*
 	border-top:1px solid #ddd;
 	
@@ -1102,7 +1118,7 @@ tr.h_a td
 	vertical-align:top;
 }
 .table_full td.tdContent{
-	padding:7px 10px 9px;
+	padding:7px 10px;
 	background-color:#f8f8f8;
 	border-right:1px solid #e5e3e3;
 	border-left:1px solid #e5e3e3;
@@ -1117,7 +1133,12 @@ tr.h_a td
 	padding-left:5px;
 }
 .table_full td{
-	padding:7px 10px 9px 15px;
+  width:100%;
+  word-break:keep-all;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+	padding:7px 10px;
 	color:#666;
 	vertical-align:top;
 	line-height:24px
@@ -3120,4 +3141,135 @@ table_fullI样式 应用于新后台
 }
 .sql_list_wrap table tr.even td{
 	background: #ebf4ff;
+}
+/**
+*验证样式
+*/
+span.tip-right, span.tip-error{display:inline-block;*display:inline;*zoom:1; vertical-align:middle!important; margin-left:5px; padding:0 5px; height:26px!important; line-height:26px!important; color:#13A821; font-size:12px!important;}
+ span.tip-right, span.tip-error{ padding-left:25px; color: #EE4F11; background:url(./images/validate_icon.gif) no-repeat 0 -27px!important;}
+span.tip-right{ color:#13A821; background-position:0 5px!important;}
+.signup-page em{ color: #f30; padding: 0 2px 0 0}
+/**
+*弹出框样式
+*/
+/*! define arale/dialog/1.2.5/dialog-debug.css */
+.ui-dialog {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000, endColorstr=#88000000);
+    padding: 6px;
+    outline: none;
+    /* http://ued.taobao.com/blog/2011/04/onfocus-this-blur/ */
+}
+
+.ui-dialog-content {
+    background: #fff;
+}
+
+:root .ui-dialog {
+    FILTER: none\9;
+}
+
+.ui-dialog-close {
+    color: #999;
+    cursor: pointer;
+    display: block;
+    font-family: tahoma;
+    font-size: 24px;
+    font-weight: bold;
+    height: 18px;
+    line-height: 14px;
+    position: absolute;
+    right: 16px;
+    text-decoration: none;
+    top: 16px;
+    z-index: 10;
+}
+.ui-dialog-close:hover {
+    color: #666;
+    text-shadow: 0 0 2px #aaa;
+}
+
+.ui-dialog-title {
+    height:45px;
+    font-size:16px;
+    font-family:'微软雅黑', '黑体', Arial;
+    line-height:46px;
+    border-bottom:1px solid #E1E1E1;
+    color:#4d4d4d;
+    text-indent: 20px;
+    background-color: #f9f9f9;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f9f9f9));
+    background: -moz-linear-gradient(top, #fcfcfc, #f9f9f9);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f9f9f9');
+    background:-o-linear-gradient(top, #fcfcfc, #f9f9f9);
+    background: -ms-linear-gradient(top, #fcfcfc, #f9f9f9);
+    background: linear-gradient(top, #fcfcfc, #f9f9f9);
+}
+
+.ui-dialog-container {
+    padding:15px 20px 20px;
+    font-size: 12px;
+}
+
+.ui-dialog-message {
+    margin-bottom:15px;
+}
+
+.ui-dialog-operation {
+    zoom:1;
+}
+
+.ui-dialog-confirm, .ui-dialog-cancel {
+    display: inline;
+}
+
+.ui-dialog-operation .ui-dialog-confirm {
+    margin-right: 4px;
+}
+
+.ui-dialog-button-orange,
+.ui-dialog-button-white {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 2px;
+    padding: 0 12px;
+    line-height:23px;
+    height:23px;
+    *overflow: visible; /* for a ie6/7 bug http://blog.csdn.net/jyy_12/article/details/6636099 */ 
+    background-image: none;
+}
+
+a.ui-dialog-button-orange:hover,
+a.ui-dialog-button-white:hover {
+    text-decoration: none;
+}
+
+.ui-dialog-button-orange {
+    color: #fff;
+    border:1px solid #d66500;
+    background-color: #f57403;
+}
+
+.ui-dialog-button-orange:hover {
+    background-color: #fb8318;
+}
+
+.ui-dialog-button-white {
+    border:1px solid #afafaf;
+    background-color: #f3f3f3;
+    color: #777;
+}
+
+.ui-dialog-button-white:hover {
+    border: 1px solid #8e8e8e;
+    background-color: #fcfbfb;
+    color: #676d70;
 }

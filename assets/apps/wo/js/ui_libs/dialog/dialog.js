@@ -205,8 +205,18 @@
         				if(width < 200) {
         					width = 700;
         				}
+        				
+        				iframe.scrolling = 'auto';
+        				
         				if( height > 600 ) {
-    	        			height = 600;
+        					height = 600;
+        					//fixed by zhihua.zhangzh
+        					//太大了？撑爆了……
+        					var wh = $(window).height();
+        					if (height > wh) {
+        						height = wh - 50;
+        					}
+    	        			//fixed by zhihua.zhangzh end.
     	        			iframe.scrolling = 'yes';
     	        		}
                         //在chorme下，iframe高度默认为150

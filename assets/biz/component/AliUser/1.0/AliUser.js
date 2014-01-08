@@ -54,7 +54,12 @@ define(function(require, exports, module) {
                     }
 
                     $.each(data, function(k, v) {
-                        var aliUser = v.name + "(" + v.empId + ")" + " - " + v.depDesc;
+                        
+                    	var aliUser = v.name + "/" + v.empId + " - " + v.depDesc;
+                        if (typeof v.nickName != 'undefined' && v.nickName != "") {
+                        	aliUser = v.name + "/" + v.nickName + "/" + v.empId + " - " + v.depDesc;
+                        }
+                    	
                         result.push({
                             matchKey: aliUser,
                             aliUser:{

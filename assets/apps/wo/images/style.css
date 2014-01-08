@@ -1,0 +1,642 @@
+﻿html {font-size:12px;}
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+form,input, button,
+textarea, p, blockquote, th, td {margin: 0;padding: 0;}
+img {border: 0;}
+em,strong,th{font-style: inherit;font-weight: inherit;}
+h1, h2, h3, h4, h5, h6{font-size: 100%;font-weight: normal;}
+input,button,textarea,select{font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;}
+input,button,textarea,select{*font-size: 100%;}
+ol, ul {list-style: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+th{text-align: left;}
+td,th,div{word-break:break-all;word-wrap:break-word}
+form{display:inline;}
+*{outline:none}
+.cc{*zoom:1;}
+.cc:after{content:'\20';display:block;height:0;clear:both;}
+.c{clear:both;font:0px/0px Arial;overflow:hidden;height:0;width:0;}
+.b{ font-weight:700;}
+.w{white-space:nowrap}
+.s1 {color:#FF0000;}
+.tal{text-align:left}
+.tac{text-align:center}
+.tar{text-align:right}
+.fr{float:right}
+.fl{float:left}
+.pr{position:relative}
+.cp{cursor:pointer;}
+.vt,.vt td{vertical-align:top}
+.f9{font-size:10px;}
+.f10,small,.small{font-size:11px;}
+.f12{font-size:12px}
+.f14{font-size:14px}
+.f16{font-size:16px;}
+.f20{font-size:20px;}
+.f24{font-size:24px;}
+.fn,.fn a{font-weight:normal;}
+/*layout*/
+body{color:#666;_width:98%;background:#fff;}
+.wrap{padding:10px;}
+a{text-decoration:none;color:#336699;}
+a:hover,.line{ text-decoration:underline;}
+.mt5{margin-top:5px;}
+.mb5{margin-bottom:5px;}
+.mb10{margin-bottom:10px;}
+.mb15{margin-bottom:15px;}
+.mb20{margin-bottom:20px;}
+.mr5{margin-right:5px;}
+.mr10{margin-right:10px;}
+.mr20{margin-right:20px;}
+.p_lr_10{padding:0 10px;}
+.p10{padding:10px;}
+.p15{padding:15px;}
+.lh_18{line-height:18px;height:18px;overflow:hidden;}
+
+body{font:12px/1.5 tahoma,arial,\5b8b\4f53;color:#666;}
+a{color:#336699;}
+.clear{clear:both;line-height:0px;height:0px;font-size:0px;}
+label,label input{vertical-align:middle;}
+label input{margin:0 2px;}
+.main{padding:10px;}
+.main label{vertical-align:middle;}
+.main .bar{background-color:#EAF2FA;border:1px solid #cbdaea;line-height:30px;font-weight:bold;padding-left:5px;margin:10px 0;}
+
+.main .form li {
+line-height:36px;
+}
+/*bg*/
+.input_color,.input_time,.expand,.hide,.lower,.btn_add,.btn_add i,span.btn,span.bt,span.btn span,span.bt span,span.btn2,span.bt2,span.btn2 span,span.bt2 span,.td_bgB td,.del_img,.zt_stylebg,.tip_wind dt{background:url(../images/index_icon.png);}
+
+/*.nav li{float:left;width:200px;text-align:center;background:url(../images/u28.png) no-repeat right center}
+.nav li.current{font-weight:bold;color:#000;background:#5098E8 url(../images/u36.png) no-repeat right center;}
+.nav li.last{background-image:none}*/
+.admin_table table{}
+.admin_table .tr1{}
+.admin_table .tr1:hover .td1,.admin_table .tr1:hover .td3{background:#ecf3f9;}
+.admin_table .tr1:hover .td2{background-color:#f4f8fc;}
+.admin_table .tr2 td{padding:7px 0 4px 15px;border-bottom:1px solid #dde9f5;background-color:#f5faff;color:#008800;}
+.admin_table .tr3 td{padding:8px 0 6px 15px;}
+.admin_table .td1,.admin_table .td2,.admin_table .td3{padding:8px 0 8px 15px;border-bottom:1px solid #dde9f5;line-height:22px;}
+.admin_table .td1,.admin_table .td3{width:140px;color:#333;background:#f4f8fc;}
+.admin_table .td2{}
+/*form*/
+textarea,input{font-size:1.0em;vertical-align:middle;}
+textarea{border: 1px solid; border-color: #999999 #e1e1e1 #e1e1e1 #999999;padding:3px;}
+.textarea{width:332px;height:62px;overflow:auto;background:#fff;line-height:1.3;}
+.input{border:1px solid; border-color: #999999 #e1e1e1 #e1e1e1 #999999;padding:2px 0px 2px 2px;background:#fff;}
+.input:hover,.textarea:hover,.input_img:hover{border:1px solid #23a6dd;}
+.input_wa{width:152px;}
+.input_wb{width:332px;}
+.input_wc{width:67px;}
+.input_wd{width:15px;padding-left:1px;}
+.input_we{width:25px;}
+.input_img{display:inline-block;padding:0 3px 0;width:154px;height:21px;background:#fff;border:1px solid; border-color: #999999 #e1e1e1 #e1e1e1 #999;}
+.input_img	i{float:right;width:13px;height:13px;overflow:hidden;display:block; text-indent:-2000em;margin:3px 0 0 0; cursor:pointer;}
+.input_img input{border:0;padding:2px 0;*padding:4px 0 0;_*padding:3px 0 0;width:136px;_height:14px;}
+.input_color{ background-position:-40px -30px;}
+.input_time{ background-position:-20px -30px;}
+input.bt{border:1px solid; border-color:#e1e1e1 #999999 #999999 #e1e1e1;padding:2px 3px;*padding:4px 3px 0;background:#e4e4e4; cursor:pointer;}
+select{vertical-align:middle;}
+.select_wa{width:160px;}
+.select_wb{width:81px;}
+.select_wc{width:342px;}
+.td2_wp{width:216px;overflow:hidden;}
+.td2_wp a{white-space:nowrap;margin-right:10px;float:left;}
+.admin_table .td3{width:340px;}
+.admin_table td .none{display:none;}
+.admin_table .tdcur .none{display:inline;}
+.admin_table_b{width:340px;}
+.admin_table_b table{}
+.admin_table_b td{padding:0 10px 5px 0;line-height:21px;}
+.admin_table_c{width:480px;}
+.admin_table_c table{width:100%;}
+.admin_table_c th{width:50px;padding-top:1px;font-weight:100;}
+.admin_table_c td{padding-bottom:10px;}
+.zt_style{border:1px solid #c0dbf8;background:#fff;width:968px;z-index:3;}
+.zt_stylebg{border:1px solid #ffffff; background-position:0 -290px;padding:4px; background-color:#e2eefa;}
+.zt_stylebg td{padding:0 5px;color:#333;}
+.zt_stylebg .layoutDragElement{margin-right:10px;width:35px;height:24px;float:left;}
+.td_bgA td{background:#f1faff;}
+.td_bgB td{ background-position:0 -360px; background-color:#f5fcff;}
+.admin_table .td_bgC .td2,.admin_table .td_bgC:hover .td2{background:#fff6e4;border-bottom:1px solid #fadbb6;}
+.admin_table .td_bgC .td1,.admin_table .td_bgC:hover .td1{background:#fdedda;border-bottom:1px solid #fadbb6;}
+
+.admin_table .td_bgD .td2,.admin_table .td_bgD:hover .td2{background:#f5fcf5;border-bottom:1px solid #ceeace;}
+.admin_table .td_bgD .td1,.admin_table .td_bgD:hover .td1{background:#e6f8e6;border-bottom:1px solid #ceeace;}
+/*list*/
+
+.admin_filter{border:1px solid #bfdaf7;}
+.admin_filter dl{border:1px solid #fff;background:#fff url(../images/filter.png) repeat-x;height:62px;}
+.admin_filter dt{padding:8px 10px;}
+.admin_filter dd{padding:0 10px;}
+.admin_filter a{background:#fff url(../images/bg_ico.png) 7px 4px no-repeat;border:1px solid #adcae8;line-height:22px;height:22px;padding:0 10px 0 25px;float:left;margin-right:10px;}
+.admin_filter a:hover{ text-decoration:none;border:1px solid #eea80c;}
+.admin_filter .radio{ background-position:7px 4px;}
+.admin_filter .checkbox{ background-position:7px -26px;}
+.admin_filter .ipone{ background-position:7px -54px;}
+.admin_filter .iping{ background-position:7px -86px;}
+.admin_filter .select{ background-position:7px -116px;}
+.admin_filter_con{border:1px dashed #eea80c;background:#fffbf2;padding:10px;}
+
+
+/*button*/
+span.btn,span.bt,span.btn2,span.bt2{padding:0 2px 0 0;zoom: 1;display: inline-block;vertical-align: middle; cursor: pointer; _display: inline;margin:0 3px;}
+span.btn input,span.bt button,span.btn2 input,span.bt2 input{display:block;overflow:visible;width:auto;_width:0;border:0 none;background:none;text-decoration:none;vertical-align:middle;white-space:nowrap;cursor:pointer;}
+span.btn,span.bt{background-position:right -150px;}
+span.btn span,span.bt span{display: block;background-position:0 -150px;padding:0 11px 0 13px;*padding:0 13px 0 15px;}
+span.btn button,span.bt input{height:27px;margin:0 -15px;padding:0 15px;line-height:27px;font-size:14px;font-weight:700;}
+span.btn button,span.btn2 input{color:#ffffff;}
+span.bt button,span.bt2 input{color:#555555;}
+span.bt{ background-position:right -180px;}
+span.bt span{ background-position:left -180px;}
+span.btn2,span.bt2{background-position:right -210px;}
+span.btn2 span,span.bt2 span{display: block;background-position:0 -210px;padding:0 5px 0 7px;*padding:0 7px 0 9px;}
+span.btn2 button,span.bt2 input{height:21px;margin:0 -9px;padding:0 9px;line-height:21px;}
+span.bt2{ background-position:right -235px;}
+span.bt2 span{ background-position:left -235px;}
+.btn_add{float:left;padding-right:10px;height:19px;line-height:21px;overflow:hidden;margin-top:3px; background-position:right -260px;display:block;color:#729c01;}
+.btn_add i{float:left;display:block;height:19px;padding:0 0 0 20px;font-style:normal;font-weight:700;font-size:12px;background-position:0 -260px; cursor:pointer;}
+.btn_add:hover{ text-decoration:none;}
+	
+.btn3,.bt3{cursor:pointer;padding:.1em 1em;*padding:0 1em;font-size:9pt; line-height:130%; overflow:visible;}
+.btn3{border:1px solid #ff5500;background:#ff8800;margin:0 3px;color:#fff;}
+.bt3{border:1px solid #c2d8ee;background:#fff;margin:0 3px;color:#333;}
+/*list*/
+.list_A{float:left;}
+.list_A li{height:22px;line-height:24px;overflow:hidden;cursor:default;float:left; clear:both;}
+.list_A .current,.list_B .current,.list_C .current{color:#008800;}
+.list_A input,.list_B input{margin-right:3px;*margin-right:0px;_margin-top:-2px;}
+.list_B{}
+.list_B li{height:26px;line-height:26px;overflow:hidden;}
+.list_C{float:left; clear:both;}
+.list_C li{height:30px;line-height:30px;overflow:hidden;}
+.list_D{padding:15px;}
+.list_D li{width:130px;height:130px;float:left; text-align:center;}
+.list_D li img{border:1px solid #ccc;padding:2px;}
+.list_D li select{width:68px;}
+.list_80{}
+.list_80 li{width:80px;float:left;clear:none;}
+.list_120{width:365px;float:none;}
+.list_120 input{}
+.list_120 .input{_margin-top:0;padding:1px 2px;*padding:2px 2px 0;}
+.list_120 li{width:120px;float:left; clear:none;}
+.list_160{width:365px;float:none;}
+.list_160 li{width:160px;float:left;margin-bottom:5px;clear:none;}
+.list_160 .input{margin-right:5px;}
+.list_200{}
+.list_200 li{width:200px;float:left;}
+.list_200 li img{ vertical-align:middle;}
+.main #resizable{background:#FFFBF2;border:1px dashed #EEA80C;padding:10px;}
+.main #preview{background:none repeat scroll 0 0 #FFFFFF;border:1px solid #E4E4E4;overflow:hidden;padding:0 10px;}
+.main #preview .box{border-top:1px dashed #BCBCBC;color:#333;margin-top:-1px;padding:10px;background-color:#fff;zoom:1;cursor:move;}
+.main #preview .box .subject{font-weight:bold;margin:3px 0}
+.main #preview .option{line-height:25px;overflow:hidden;zoom:1}
+.main #preview .option textarea{width:400px;height:160px;}
+.main #preview .option input[type=text]{width:400px;}
+.main #preview .option .custom{width:50px !important;}
+.main #preview .option select{margin:0 4px;}
+.main #preview .horizontal{overflow:hidden;}
+.main #preview .horizontal li{float:left;width:25%}
+.main #preview .foot{text-align:right;padding-right:8px;}
+.main #preview .foot span{color:Blue;cursor:pointer;}
+.setup-box{position:absolute;}
+.setup-box .left{width:350px;float:left;}
+.setup-box .right{float:left;border-left:1px dashed #ccc;padding-left:5px;}
+.setup-box .bottom{border-top:1px dashed #ccc;margin-top:15px;}
+.setup-box .bottom p{cursor:move;}
+.setup-box .bottom p input{width:250px;margin-left:32px;margin-top:4px;}
+
+
+/*popping*/
+.setup-box{border:#5692CE 4px solid;background-color:#fff;padding:10px;position:absolute;z-index:9999;display:none;}
+.setup-box li{padding:5px 2px;}
+.setup-box bottom li{cursor:move}
+.setup-box span{color:Blue;cursor:pointer;}
+.setup-box .input{
+    background:none repeat scroll 0 0 #FFFFFF;
+    border-color:#999999 #E1E1E1 #E1E1E1 #999999;
+    border-style:solid;
+    border-width:1px;
+    padding:2px 0 2px 2px;
+}
+.setup-box .btnli{background:#F7F7F7;border-top:1px dotted #ccc;}
+.setup-box .input:hover{border:1px solid #23A6DD;}
+
+.setup-box .btn2{
+    cursor:pointer;
+    display:inline-block;
+    margin:0 3px;
+    padding:0 2px 0 0;
+    vertical-align:middle;
+    background:url("../images/index_icon.png") no-repeat right -210px transparent;
+}
+.setup-box .btn2 input{
+    height:21px;
+    line-height:21px;
+    margin:0 -9px;
+    padding:0 9px;
+    color:#FFFFFF;
+}
+.h2{
+    background:#EAF2FA;
+    border-bottom:1px solid #DEEAF7;
+    border-top:1px solid #CBDAEA;
+    color:#333333;
+    font-size:14px;
+    font-weight:700;
+    height:25px;
+    line-height:25px;
+    padding:0 15px;
+}
+#mask {  
+    position:absolute;  
+    z-index:9998;  
+    background-color:#000;  
+    display:none; 
+    left:0;top:0;
+}  
+
+
+/*----------datapicker------------*/
+/* Default styling for jQuery Datepicker v4.0.2. */
+.datepick {
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #444;
+    border-radius: 0.25em;
+    -moz-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+
+}
+.datepick-rtl {
+	direction: rtl;
+}
+.datepick-popup {
+	z-index: 1000;
+}
+.datepick-disable {
+	position: absolute;
+	z-index: 100;
+	background-color: white;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+.datepick a {
+	color: #fff;
+	text-decoration: none;
+}
+.datepick a.datepick-disabled {
+	color: #888;
+	cursor: auto;
+}
+.datepick button {
+    margin: 0.25em;
+    padding: 0.125em 0em;
+    background-color: #fcc;
+    border: none;
+    border-radius: 0.25em;
+    -moz-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    font-weight: bold;
+}
+.datepick-nav, .datepick-ctrl {
+	float: left;
+	width: 100%;
+	background-color: #000;
+	color: #fff;
+	font-size: 90%;
+	font-weight: bold;
+}
+.datepick-ctrl {
+	background-color: #600;
+}
+.datepick-cmd {
+	width: 30%;
+}
+.datepick-cmd:hover {
+	background-color: #777;
+}
+.datepick-ctrl .datepick-cmd:hover {
+	background-color: #f08080;
+}
+.datepick-cmd-prevJump, .datepick-cmd-nextJump {
+	width: 8%;
+}
+a.datepick-cmd {
+	height: 1.5em;
+}
+button.datepick-cmd {
+	text-align: center;
+}
+.datepick-cmd-prev, .datepick-cmd-prevJump, .datepick-cmd-clear {
+	float: left;
+	padding-left: 2%;
+}
+.datepick-cmd-current, .datepick-cmd-today {
+	float: left;
+	width: 35%;
+	text-align: center;
+}
+.datepick-cmd-next, .datepick-cmd-nextJump, .datepick-cmd-close {
+	float: right;
+	padding-right: 2%;
+	text-align: right;
+}
+.datepick-rtl .datepick-cmd-prev, .datepick-rtl .datepick-cmd-prevJump,
+.datepick-rtl .datepick-cmd-clear {
+	float: right;
+	padding-left: 0%;
+	padding-right: 2%;
+	text-align: right;
+}
+.datepick-rtl .datepick-cmd-current, .datepick-rtl .datepick-cmd-today {
+	float: right;
+}
+.datepick-rtl .datepick-cmd-next, .datepick-rtl .datepick-cmd-nextJump,
+.datepick-rtl .datepick-cmd-close {
+	float: left;
+	padding-left: 2%;
+	padding-right: 0%;
+	text-align: left;
+}
+.datepick-month-nav {
+	float: left;
+	background-color: #777;
+	text-align: center;
+}
+.datepick-month-nav div {
+	float: left;
+	width: 12.5%;
+	margin: 1%;
+	padding: 1%;
+}
+.datepick-month-nav span {
+	color: #888;
+}
+.datepick-month-row {
+	clear: left;
+}
+.datepick-month {
+	float: left;
+	width: 15em;
+	border: 1px solid #444;
+	text-align: center;
+}
+.datepick-month-header, .datepick-month-header select, .datepick-month-header input {
+	height: 1.5em;
+	background-color: #444;
+	color: #fff;
+	font-weight: bold;
+}
+.datepick-month-header select, .datepick-month-header input {
+	height: 1.4em;
+	border: none;
+}
+.datepick-month-header input {
+	position: absolute;
+	display: none;
+}
+.datepick-month table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.datepick-month thead {
+	border-bottom: 1px solid #aaa;
+}
+.datepick-month th, .datepick-month td {
+	margin: 0em;
+	padding: 0em;
+	font-weight: normal;
+	text-align: center;
+}
+.datepick-month th {
+	border: 1px solid #777;
+}
+.datepick-month th, .datepick-month th a {
+	background-color: #777;
+	color: #fff;
+}
+.datepick-month td {
+	background-color: #eee;
+	border: 1px solid #aaa;
+}
+.datepick-month td.datepick-week {
+	border: 1px solid #777;
+}
+.datepick-month td.datepick-week * {
+	background-color: #777;
+	color: #fff;
+	border: none;
+}
+.datepick-month a {
+	display: block;
+	width: 100%;
+	padding: 0.125em 0em;
+	background-color: #eee;
+	color: #000;
+	text-decoration: none;
+}
+.datepick-month span {
+	display: block;
+	width: 100%;
+	padding: 0.125em 0em;
+}
+.datepick-month td span {
+	color: #888;
+}
+.datepick-month td .datepick-other-month {
+	background-color: #fff;
+}
+.datepick-month td .datepick-weekend {
+	background-color: #ddd;
+}
+.datepick-month td .datepick-today {
+	background-color: #f0c0c0;
+}
+.datepick-month td .datepick-highlight {
+	background-color: #f08080;
+}
+.datepick-month td .datepick-selected {
+	background-color: #777;
+	color: #fff;
+}
+.datepick-month th.datepick-week {
+	background-color: #777;
+	color: #fff;
+}
+.datepick-status {
+	clear: both;
+	background-color: #ddd;
+	text-align: center;
+}
+.datepick-clear-fix {
+	clear: both;
+}
+.datepick-cover {
+    display: none;
+    display/**/: block;
+    position: absolute;
+    z-index: -1;
+    filter: mask();
+    top: -1px;
+    left: -1px;
+    width: 100px;
+    height: 100px;
+}
+/* calendar styles */
+#calendar_div {
+	display: none;
+	border: 1px solid #777;
+	z-index: 10; 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+}
+#calendar_div a {
+	cursor: pointer;
+	cursor: hand;
+}
+button.calendar_trigger {
+	width: 25px;
+}
+img.calendar_trigger {
+	margin: 2px;
+	vertical-align: middle;
+}
+#calendar_control, #calendar_links, #calendar_header, #calendar, #calendar_time {
+	clear: both;
+	float: left;
+	width: 185px;
+	color: #fff;
+}
+#calendar_control {
+	background: #400;
+}
+#calendar_links {
+	background: #000;
+}
+#calendar_control a, #calendar_links a {
+	font-weight: bold;
+	font-size: 80%;
+	letter-spacing: 1px;
+	color: #eee;
+	padding: 2px 5px;
+}
+#calendar_control a:hover {
+	background: #fdd;
+	color: #333;
+}
+#calendar_links a:hover, .calendar_titleRow a:hover {
+	background: #ddd;
+	color: #333;
+}
+#calendar_clear, #calendar_prev {
+	float: left;
+}
+#calendar_current {
+	float: left;
+	width: 35%;
+	text-align: center;
+}
+#calendar_close, #calendar_next {
+	float: right;
+}
+#calendar_header, #calendar_time {
+	background: #333;
+	text-align: center;
+	font-weight: bold;
+}
+#calendar_header select, #calendar_time select {
+	background: #333;
+	color: #fff;
+	border: 0px;
+	font-weight: bold;
+}
+#calendar {
+	background: #ccc;
+	text-align: center;
+	font-size: 100%;
+}
+#calendar a {
+	width: 100%;
+	display: block;
+}
+#calendar a:hover {
+	color: #eee;
+}
+#calendar .calendar_titleRow {
+	background: #777;
+}
+#calendar .calendar_titleRow a {
+	color: #eee;
+}
+#calendar .calendar_titleRow a:hover {
+	color: #000;
+}
+#calendar .calendar_daysRow {
+	background: #eee;
+	color: #666;
+}
+#calendar .calendar_daysCell {
+	border: 1px solid #ddd;
+}
+#calendar .calendar_daysCell a {
+	color: #000;
+	width: 100%;
+}
+#calendar .calendar_daysCell a:hover {
+	background: none;
+}
+#calendar .calendar_weekEndCell {
+	background: #ddd;
+}
+#calendar .calendar_daysCellOver {
+	background: #fff;
+	border: 1px solid #777;
+}
+#calendar .calendar_unselectable {
+	color: #888;
+}
+#calendar_today {
+	background: #fcc !important;
+}
+#calendar_currentDay {
+	background: #999 !important;
+}
+#calendar_cover {
+    display: none; /*sorry for IE5*/
+    display/**/: block; /*sorry for IE5*/
+    position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -1px; /*must have*/
+    left: -1px; /*must have*/
+    width: 300px; /*must have to match width and borders*/
+    height: 300px; /*must have to match maximum height*/ 
+}
+
+
+/*-------------------------------------------------*/
+/*
+ * jQuery UI Resizable @VERSION
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Resizable#theming
+ */
+.ui-resizable { position: relative;}
+.ui-resizable-handle { position: absolute;font-size: 0.1px;z-index: 99999; display: block;}
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display: none; }
+.ui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0; }
+.ui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0; }
+.ui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%; }
+.ui-resizable-w { cursor: w-resize; width: 7px; left: -5px; top: 0; height: 100%; }
+.ui-resizable-se { cursor: se-resize; width: 12px; height: 12px; right: 1px; bottom: 1px; }
+.ui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: -5px; bottom: -5px; }
+.ui-resizable-nw { cursor: nw-resize; width: 9px; height: 9px; left: -5px; top: -5px; }
+.ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}

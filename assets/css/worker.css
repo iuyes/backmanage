@@ -1,11 +1,15 @@
 /*bubble*/
+.sendpanel-area{height:60px;width:320px}
+.j-title{ width: 100%;height: 20px; overflow: hidden;}
+.isoverflow{ height: 300px;overflow: hidden;}
 .bubble-wrap { padding: 5px 0; overflow:hidden; *zoom:1; }
-.bubble-wrap li { padding: 5px 10px; color: #999999; clear:both; overflow:hidden; *zoom:1; vertical-align:middle;}
+.bubble-wrap li { padding: 8px 10px; color: #666; clear:both; overflow:hidden; *zoom:1; vertical-align:middle;}
 .bubble-wrap li .gttips { padding:15px 10px 0;}
+.bubble-wrap li p.r-time{color: #999; padding-left: 5px}
 .bubble-main { background-color:#FFFFFF; border:1px solid #E0E0E0; position: relative; -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px; -moz-box-shadow:0 1px 2px #E0E0E0; -webkit-box-shadow:0 1px 2px #E0E0E0; box-shadow:0 1px 2px #E0E0E0; background-image:-moz-linear-gradient(center bottom, #F0F0F0, #FFFFFF); background-image:-webkit-gradient(linear, center bottom, center top, from(#F0F0F0), to(#FFFFFF)); background-image:-o-linear-gradient(center bottom, #F0F0F0, #FFFFFF); background-image:linear-gradient(center bottom, #F0F0F0, #FFFFFF); }
 .bubble-wrap .bubble-main.left  { float:left; background-color:#f3fbff; border:1px solid #d8e1ea; background-image:-moz-linear-gradient(center bottom, #e6f7ff, #f3fbff); background-image:-webkit-gradient(linear, center bottom, center top, from(#e6f7ff), to(#f3fbff)); background-image:-o-linear-gradient(center bottom, #e6f7ff, #f3fbff); background-image:linear-gradient(center bottom, #e6f7ff, #f3fbff); }
 .bubble-wrap .bubble-main.left.warn {background-color:#ffeeee; border:1px solid #ffb6b6; background-image:-moz-linear-gradient(center bottom, #ffe0da, #ffeeee); background-image:-webkit-gradient(linear, center bottom, center top, from(#ffe0da), to(#ffeeee)); background-image:-o-linear-gradient(center bottom, #ffe0da, #ffeeee); background-image:linear-gradient(center bottom, #ffe0da, #ffeeee);}
-.bubble-content { height: auto; max-width: 335px; _width: 335px; padding: 8px 10px; }
+.bubble-content { height: auto; max-width: 335px; _width: 335px; padding: 8px 10px; white-space: pre-wrap;}
 .arrow-left,
 .arrow-right { width:8px; height:14px; background:url(./images/bubble_arrow.gif?009) no-repeat 0 0; }
 .arrow-right {position: absolute; right: -8px; top: 10px; background-position:0 -50px;}
@@ -19,17 +23,18 @@ background: #e6e6e6;
 font-size: 12px;}
 /*底部操作bar*/
 .control-bar{
-		background: #a4c6ef; 
-		position: fixed;
-		z-index: 99999; 
-		bottom: 0 ;
-		width: 750px;
-		left: 20px;
-		height: 81px;
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		-khtml-border-radius: 4px;
-		border-radius: 4px; 
+	background: #a4c6ef; 
+	position: fixed;
+	z-index: 999; 
+	bottom: 0 ;
+	width: 750px;
+	left: 20px;
+	height: 81px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+	box-shadow: 0 0 8px #888; 
 }
 .control-bar a{
 	cursor: pointer;
@@ -79,7 +84,7 @@ font-size: 12px;}
 	-webkit-border-radius: 4px 4px 0 0;
 	-moz-border-radius: 4px 4px 0 0;
 	-khtml-border-radius: 4px 4px 0 0;
-	border-radius: 4px 4px 0 0; 
+	border-radius: 4px 4px 0 0;
 }
 .control-bar .content-block .content-block-inner .in-content{
 	background: #fff;
@@ -172,13 +177,14 @@ font-size: 12px;}
 
 .catetory-i {
 	padding: 10px;
-	height: 450px;
-	overflow: scroll;
+	height:430px;
+	/*overflow: scroll;*/
+	overflow: hidden;
 }
 .catetory-i h3.title{ font: 100 14px/20px "Microsoft YaHei", SimHei; border-bottom: 1px solid #eee; line-height: 20px; padding: 5px 0; color: #08c; margin-bottom: 5px }
 .catetory-i h3.title b{ font-weight: 100;  padding: 0 5px 0 0}
 
-.catetory-i ul{width: 150px;position: relative;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; 
+.catetory-i ul{width: 130px;position: relative;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px; 
 -webkit-box-shadow:0 1px 4px rgba(0,0,0,.065);box-shadow:0 1px 4px rgba(0,0,0,.065);-moz-box-shadow:0 1px 4px rgba(0,0,0,.065);}
 .catetory-i ul li{  line-height: 20px; }
 .catetory-i ul li a.stlink{ display: block; margin:0 0 -1px; padding: 8px 14px; border: 1px solid #e5e5e5; color: #08c; text-decoration: none;}
@@ -191,24 +197,25 @@ font-size: 12px;}
  padding: 0px;
   top:0;
   left: 0;
-  z-index: 9999;
+  z-index: 9;
   display: none;
-  width: 430px;
-  max-width: 430px;
+  width: 340px;
   /*
    border:1px solid #e5e5e5;
   -webkit-box-shadow:0 3px 5px rgba(0,0,0,0.2);
   -moz-box-shadow:0 3px 5px rgba(0,0,0,0.2);
   box-shadow:0 3px 5px rgba(0,0,0,0.2);
   */
-  overflow:scroll;
+
+  overflow-x:hidden;
 }
 .catetory-i li .popover dl{padding: 5px 0;margin: 0 5px;border-bottom: 1px dotted #e5e5e5;color: #e5e5e5;line-height: 20px}
 .catetory-i li .popover dl a{text-decoration: none;}
 .catetory-i li .popover dl dt{font-size: 14px; font-weight: 100; padding: 3px 0}
 .catetory-i li .popover dl dt a{ color: #333;font-weight: bold;}
 .catetory-i li .popover dl dd{ padding: 5px 0 0 5px}
-.catetory-i li .popover dl dd a{ font-size: 12px; margin: 0 5px; color: #666}
+.catetory-i li .popover dl dd a{ font-size: 12px; color: #666}
+.catetory-i li .popover dl dd span{ padding: 0 3px;}
 .catetory-i .icon-chevron-right{float: right;
 margin-top: 2px;
 margin-right: -6px;
@@ -223,3 +230,4 @@ background-image: url("./images/glyphicons-halflings.png");
 background-repeat: no-repeat;
 }
 .catetory-i ul li a.maintainHover .icon-chevron-right{float: right;background-image: url("./images/glyphicons-halflings-white.png");opacity: 1;}
+.submit-bar-reload{position: absolute;top: 27px;height: 30px;right: 145px}

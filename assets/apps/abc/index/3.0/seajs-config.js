@@ -4,7 +4,7 @@
 (function(){
 
     seajs.config({
-        base: '/ABC-demo/assets',
+        base: '/backmanage/assets',
         alias: {
             '$': 'gallery/jquery/1.10.2/jquery',
             '$-debug' : 'gallery/jquery/1.10.2/jquery-debug',

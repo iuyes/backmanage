@@ -70,10 +70,10 @@ define(function(require, exports) {
                 });
 				
 				// 结单时间(开始)
-				new Calendar({trigger: '#sloveStart'});
+				new Calendar({trigger: '#solveStart'});
 				
 				// 结单时间(结束)
-				new Calendar({trigger: '#sloveEnd'});
+				new Calendar({trigger: '#solveEnd'});
                 
                 // 工单时间(开始)
 				new Calendar({trigger: '#supportStart'});
@@ -232,7 +232,7 @@ define(function(require, exports) {
             queryData.total_num = _totalNum;
             var searchQueryString = S.param(queryData);
             */
-
+        		
             var buildHtml = artTemplate.render('searchResultTpl', {searchResult: rsp.data, total: rsp.total});
             $(_contentBox).html(buildHtml);
 
@@ -287,7 +287,8 @@ define(function(require, exports) {
 
             _setQueryData: function() {
                 var self = this;
-
+                
+                
                 _searchQueryData = {
                     
             		questionId: $('#questionId').val(),  // 工单号
@@ -298,8 +299,8 @@ define(function(require, exports) {
             	    score: $('#score').val(), // 问题评价
             	    productId: $('#productId').val(), // 产品名称
             	    typicalQuestion: $('#typicalQuestion').val(), // 典型问题
-            	    sloveStart: $('#sloveStart').val(), // 结单时间(开始时间)
-            	    sloveEnd: $('#sloveEnd').val(), // 结单时间(结束时间)
+            	    solveStart: $('#solveStart').val(), // 结单时间(开始时间)
+            	    solveEnd: $('#solveEnd').val(), // 结单时间(结束时间)
             	    groupId: $('#groupId').val(), // 
             	    
             	    disposeName: $('#disposeName').val(), // 处理人姓名
@@ -324,12 +325,12 @@ define(function(require, exports) {
             	    priority: $('#priority').val() // 优先级
             	    
                 };
-
+                
                 if ($.trim($('#reviewUser').val()) == "") {
-                    _searchQueryData.disposeName = "";
-                    _searchQueryData.disposeAccount = "";
-                    _searchQueryData.disposeEmpId = "";
-                    _searchQueryData.disposeDepName = "";
+                    _searchQueryData.reviewName = "";
+                    _searchQueryData.reviewAccount = "";
+                    _searchQueryData.reviewEmpId = "";
+                    _searchQueryData.reviewDepName = "";
                     
                 }
 
@@ -339,6 +340,8 @@ define(function(require, exports) {
                     _searchQueryData.disposeEmpId = "";
                     _searchQueryData.disposeDepName = "";
                 }
+                
+                console.log(_searchQueryData);
                 
             },
 

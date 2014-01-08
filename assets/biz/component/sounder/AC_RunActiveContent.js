@@ -1,5 +1,5 @@
 //AC_FL_RunContent模块
-define(function(require,exports,module){
+
 
 	//v1.7
 // Flash Player Version Detection
@@ -202,7 +202,7 @@ function AC_FL_RunContent(){
   AC_Generateobj(ret.objAttrs, ret.params, ret.embedAttrs);
 }
 
-module.exports = AC_FL_RunContent;
+
 
 function AC_SW_RunContent(){
   var ret = 
@@ -295,4 +295,3 @@ function AC_GetArgs(args, ext, srcParamName, classid, mimeType){
   if (mimeType) ret.embedAttrs["type"] = mimeType;
   return ret;
 }
-});

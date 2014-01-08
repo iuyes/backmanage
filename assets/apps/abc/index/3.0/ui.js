@@ -50,7 +50,7 @@ define(function(require, exports, module) {
         TabViewUI.showTab({
             title: '后台首页',
             path: '后台首页',
-            url: '/ABC-demo/build/html/text.html',
+            url: '/support/index.htm',
 
             // 是否显示关闭按纽
             isCloseBtn: false

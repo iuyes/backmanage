@@ -4,7 +4,7 @@
 (function(){
 
     seajs.config({
-        base: '/ABC-demo/assets',
+        base: '/assets',
         alias: {
             '$'             : 'gallery/jquery/1.10.2/jquery',
             '$-debug'       : 'gallery/jquery/1.10.2/jquery-debug',
@@ -16,8 +16,7 @@
             '_'             : 'gallery/underscore/1.4.3/underscore',
             'underscore'    : 'gallery/underscore/1.4.3/underscore',
             'backbone'      : 'gallery/backbone/0.9.10/backbone',
-            'backbone-debug': 'gallery/backbone/0.9.10/backbone-debug',
-            'dnd-debug'     :  'arale/dnd/1.0.0/dnd-debug'
+            'backbone-debug': 'gallery/backbone/0.9.10/backbone-debug'
         },
 
         //map: mapRules,
@@ -27,7 +26,7 @@
         ],
 
         'map': [
-            [ /^(.*\.(?:css|js))(.*)$/i, '$1?2013112688' ]
+            [ /^(.*\.(?:css|js))(.*)$/i, '$1?201308301020' ]
         ]
 
 

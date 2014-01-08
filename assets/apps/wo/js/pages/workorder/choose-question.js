@@ -16,10 +16,10 @@ define(function(require,exports,module){
 			var me = this,
 				ele = $("#"+me.ele),
 				eleP = ele.parent(),
-				serviceId = eleP.find("input[name=serviceId]"),
+				serviceId = eleP.find(".serviceId"),
 				questionTxt = eleP.find('.questionTxt'),
-				childId = eleP.find("input[name=childId]");
-
+				childId = eleP.find(".childId");
+console.log(9)
 			var _ChoiceD = new Dialog({
 				trigger:"#" + me.ele,
 				width:600,
