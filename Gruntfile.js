@@ -15,23 +15,23 @@ module.exports = function(grunt) {
       	livereload: true
     	},
 			scripts: {
-				files: ['app/**/*.{js,css,png,jpg,jpeg,webp}'],
+				files: ['/**/*.{js,css,png,jpg,jpeg,webp}'],
 				tasks: ['copy:debug']
 			},
 			compass: {
-				files: ['app/**/*.{scss,sass}'],
+				files: ['/**/*.{scss,sass}'],
 				tasks: ['compass:debug']
 			},
 			jade: {
-				files: ['app/**/*.jade'],
+				files: ['/**/*.jade'],
 				tasks: ['jade:debug']
 			},
 			html: {
-				files: ['app/**/*.html'],
+				files: ['/**/*.html'],
 				tasks: ['copy:debug']
 			},
 			coffee: {
-				files: ['app/scripts/{,*/}*.coffee'],
+				files: ['/scripts/{,*/}*.coffee'],
 				tasks: ['coffee:debug']
 			}
 		},
