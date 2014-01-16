@@ -14,8 +14,10 @@
 <body>
 
 <div class="wrap pr" id="workerWrap">
+    <div class="demo-wrap">
+    <h3>1.基本调用,内容传入字符串</h3>
 <dl>
-    <dt>1.<a href="#" id="J-normal-dialog">点击这里弹出</a></dt>
+    <dt><a href="#" id="J-normal-dialog">点击这里弹出</a></dt>
     <dd>
         <div class="highlight">
 <pre>
@@ -30,17 +32,114 @@
         </div>
     </dd>
 </dl>
+
+</div>
+
+<div class="dn">
+<div id="J-text-dom" class="p20">
+    <h3>弹出dom对象</h3>
+</div>
+</div>
+
+<div class="demo-wrap">
+
+<h3>2.内容传入DOM对象</h3>
+<dl>
+    <dt><a href="#" id="J-dom-dialog">点击这里</a></dt>
+    <dd>
+        <div class="highlight">
+<pre>
+ seajs.use(['$','dialog'],function($,Dialog){
+      new Dialog({
+            trigger: '#J-dom-dialog',
+            content: $("#J-text-dom")
+        });
+ });
+</pre>
+        </div>
+    </dd>
+</dl>
+</div>
+
+
+<div class="demo-wrap">
+
+<h3>3.内容传入html标签</h3>
+<dl>
+    <dt><a href="#" id="J-html-dialog">点击这里</a></dt>
+    <dd>
+        <div class="highlight">
+<pre>
+ 
+ seajs.use(['$','dialog'],function($,Dialog){
+    new Dialog({
+        trigger: '#J-html-dialog',
+        content: '&lt;h3 class="p20"&gt;hello,我是sven&lt;/h3&gt;'
+    });
+ });
+ 
+</pre>
+        </div>
+    </dd>
+</dl>
+</div>
+
+<div class="demo-wrap">
+
+<h3>4.内容传入url</h3>
+<dl>
+    <dt><a href="./form.html" id="J-url-dialog" >点击这里</a></dt>
+    <dd>
+        <div class="highlight">
+<pre>
+seajs.use(['$','dialog'],function($,Dialog){
+
+    new Dialog({
+        trigger: '#J-url-dialog',
+       content: '&lt;div class="dialog_loading"&gt;&lt;/div&gt;'
+    }).before('show',function(){
+        var url = $("#J-url-dialog").attr('href');
+        this.set('content',url)
+    }); 
+  });
+</pre>
+        </div>
+    </dd>
+</dl>
+</div>
+
+
+
+
 </div>
 
 
  <script>
 
- seajs.use(['dialog'],function(Dialog){
+ seajs.use(['$','dialog'],function($,Dialog){
     new Dialog({
         trigger: '#J-normal-dialog',
         height: '100px',
         content: '这是个弹出框'
     });
+  new Dialog({
+        trigger: '#J-dom-dialog',
+        content: $("#J-text-dom")
+    });
+
+  new Dialog({
+        trigger: '#J-html-dialog',
+        content: '<h3 class="p20">hello,我是sven</h3>'
+    });
+
+  new Dialog({
+        trigger: '#J-url-dialog',
+       content: '<div class="dialog_loading"></div>'
+    }).before('show',function(){
+        var url = $("#J-url-dialog").attr('href');
+        this.set('content',url)
+    });
+
 
  });
  </script>
