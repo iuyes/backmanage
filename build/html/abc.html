@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <title>阿里云 - 业务支撑系统</title>
-<link href="/ABC-demo/assets/apps/abc/index/3.0/css/index.css?t=201308301020" rel="stylesheet" />
-<script src="/ABC-demo/assets/libs/seajs/2.1.1/sea.js?t=201308301020"></script>
-<script src="/ABC-demo/assets/apps/abc/index/3.0/seajs-config.js?t=201308301020"></script>
+<link href="/backmanage/assets/apps/abc/index/3.0/css/index.css?t=201308301020" rel="stylesheet" />
+<script src="/backmanage/assets/libs/seajs/2.1.1/sea.js?t=201308301020"></script>
+<script src="/backmanage/assets/apps/abc/index/3.0/seajs-config.js?t=201308301020"></script>
 
 </head>
 <body>
@@ -122,101 +122,118 @@
 
 
 <script>
-seajs.use(['apps/abc/index/3.0/main'], function(i){
+seajs.use(['abc/index/3.0/main'], function(i){
+
     i.init({
             menuData:  [{
                 "id":"1",
-                "name":"客户中心",
+                "name":"基础样式",
                 "items":[{
                     "id":"2",
-                    "name":"工单管理",
+                    "name":"基础样式",
                     "items":[
-                    {
-                        "id":"3",
-                        "name":"工单信息",
-                        "items":[{
-                            "id":"4",
-                            "name":"我的工单",
-                            "state":"on",
-                            "url": "./index.htm?type=my"
-                        }]
-                    },
-                    
-                    {
-                        "id":"5",
-                        "name":"配置管理",
+                        {
+                            "id":"3",
+                            "name":"工单信息",
+                            "items":[
+                                {
+                                    "id":"4",
+                                    "name":"我的工单",
+                                    "state":"on",
+                                    "url": "/support/index.htm?type=my"
+                                },
+                                
+                                {
+                                    "id":"45",
+                                    "name":"新建工单",
+                                    "state":"on",
+                                    "url": "/support/create.htm"
+                                },
+                                
+                                {
+                                    "id":"46",
+                                    "name":"历史工单转单",
+                                    "state":"on",
+                                    "url": "/locatelog/locateLogList.htm"
+                                }
+                            ]
+                        }
+                    ]
+                }
+                ]
+            },
+            //第二个
+                {
+                    "id":"1",
+                    "name":"控件库Demo",
+                    "items":[{
+                        "id":"2",
+                        "name":"控件库Demo",
                         "items":[
                             {
-                                "id":"6",
-                                "name":"产品管理",
-                                "state":"on",
-                                "url": "/product/index.htm"
+                                "id":"3",
+                                "name":"弹出框",
+                                "items":[
+                                    {
+                                        "id":"4",
+                                        "name":"基础调用",
+                                        "state":"on",
+                                        "url": "/backmanage/build/dialog/index.html"
+                                    },
+                                    {
+                                        "id":"433",
+                                        "name":"Dialog直接显示",
+                                        "state":"on",
+                                        "url": "/backmanage/build/dialog/onshow.html"
+                                    },
+
+                                    {
+                                        "id":"45",
+                                        "name":"ConfirmBox对话框",
+                                        "state":"on",
+                                        "url": "/backmanage/build/dialog/confirm.html"
+                                    }]
                             },
                             {
-                                "id":"7",
-                                "name":"分类管理",
-                                "state":"on",
-                                "url": "/category/index.htm"
-                            },                       
-                            {
-                                "id":"8",
-                                "name":"配置表",
-                                "state":"on",
-                                "url": "/config/index.htm"
-                            },                       
-                            
-                            {
-                                "id":"9",
-                                "name":"责任田管理",
-                                "state":"on",
-                                "url": "/duty/index.htm"
+                                "id":"311",
+                                "name":"表单",
+                                "items":[
+                                    {
+                                        "id":"45",
+                                        "name":"通用表单",
+                                        "state":"on",
+                                        "url": "/backmanage/build/form/index.html"
+                                    }]
                             },
-                            
                             {
-                                "id":"10",
-                                "name":"责任田超时管理",
-                                "state":"on",
-                                "url": "/duty/overtime.htm"
-                            }, 
-                            
-                            {
-                                "id":"11",
-                                "name":"责任田典型问题管理",
-                                "state":"on",
-                                "url": "/duty/typical_question.htm"
+                                "id":"3111",
+                                "name":"Drag",
+                                "items":[
+                                    {
+                                        "id":"45",
+                                        "name":"拖动",
+                                        "state":"on",
+                                        "url": "/backmanage/build/html/dragtest.html"
+                                    }]
                             },
-                            
-                            {
-                                "id":"12",
-                                "name":"用户组管理",
-                                "state":"on",
-                                "url": "/user/group.htm"
-                            },
-                            
-                            {
-                                "id":"13",
-                                "name":"用户管理",
-                                "state":"on",
-                                "url": "/user/index.htm"
-                            },
-                            
-                            {
-                                "id":"14",
-                                "name":"用户上下班管理",
-                                "state":"on",
-                                "url": "/issues/index.htm?type=my"
-                            },
-                            
-                            
+                                                       {
+                                "id":"3112",
+                                "name":"滚动Scroll",
+                                "items":[
+                                    {
+                                        "id":"45",
+                                        "name":"scroll",
+                                        "state":"on",
+                                        "url": "/backmanage/build/html/scroll.html"
+                                    }]
+                            }
+
+
                         ]
-                    
-                    
                     }
-                    
-                    
                     ]
-                }]
-            }]   
+                }
+            ]   
     });
     
     
