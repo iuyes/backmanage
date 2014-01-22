@@ -49,7 +49,7 @@
                     <th><span class="org">*</span>使用产品与服务:</th>
                     <td>
                         <select  name="productId" class="length_4">
-                                <option value="0">请选择</option>
+                                <option value="">请选择</option>
                                 <option value="12">云服务器 ECS</option>
                                 <option value="10">关系型数据库 RDS</option>
                                 <option value="86">负载均衡 SLB</option>
@@ -65,7 +65,7 @@
                     <th><span class="org">*</span>接手组:</th>
                     <td>
                         <select name="groupId" class="length_4">
-                            <option value="0">请选择</option>
+                            <option value="">请选择</option>
                             <option value="1">ECS PE组</option> 
                             <option value="2">技术研发</option>                    
                             <option value="3">运营</option>                                 
@@ -103,14 +103,16 @@
 
 
 <script>
-seajs.use(['$','biz/component/plugin.validate'],function($,validate){
+seajs.use(['$','biz/component/plugin.validate','biz/component/plugin.ajaxform'],function($,validate,ajaxform){
     var validate = validate($);
-    //手机校验
+    var ajaxform = ajaxform($);
+
     $.validator.addMethod("isPhone",function(val,ele){
         var phoneReg =  /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/;
         var len = val.length;
         return this.optional(ele) || (len==11 && phoneReg.test($.trim(val)));
     });
+    
     var _rules = {
         'yunid' : {
             required : true
@@ -123,8 +125,8 @@ seajs.use(['$','biz/component/plugin.validate'],function($,validate){
         },
         'remark' :{
             required : true,
-            minLength : 2,
-            maxLength : 500
+            minlength : 2,
+            maxlength : 500
         },
         'productId' : {
             required:true
@@ -151,11 +153,11 @@ seajs.use(['$','biz/component/plugin.validate'],function($,validate){
         },
         'remark' :{
             required : "此项必填",
-            minLength : "字符长度为2-500",
-            maxLength : "字符长度为2-500"
+            minlength : "字符长度为2-500",
+            maxlength : "字符长度为2-500"
         },
         'productId' : {
-            required:true
+            required:"此项必选"
         },
         'groupId' :{
             required:"此项必选"
@@ -168,33 +170,45 @@ seajs.use(['$','biz/component/plugin.validate'],function($,validate){
         }
     };
 
-
   //报名表单验证        
     $.validator.setDefaults({
         submitHandler: function(form) { 
-            form.submit();
-            //$.ajax({
 
-            //}) 
+        $.ajaxSubmit({
+            formEle: form,
+            submitBtnEle: $(form).find('button[type=submit]')
+        });
+            
+    /*
+    new Dialog({
+        content: '<div class="p20 tac"><span class="tips_loading mr10"></span><span class="vt" style="line-height:28px">正在提交,请稍候...</span></div>',
+        closeTpl :false,
+        width : 300
+    }).show();
+    */
         }
     });
+
     $("#J-form").validate({
-        errorClass:"icon-validate-error",
+        errorClass:"tip-error",
         errorElement:"span",
-       // wrapper : 'span',
         onkeyup:false,
         errorPlacement:function(error,element){
-            var p = element.parent(); 
-            if(p.find("span.icon-validate-ok").length > 0){
+            var p;
+            if (element.is(":checkbox") || element.is(":radio") || element.is("input[type=file]")) {
+                p = element.parent().parent();
+            }else{ 
+                p = element.parent(); 
+            }
+            if(p.find("span.tip-right").length > 0){
                 p.find("span").remove();
             }
-            console.log(error.html())
             error.appendTo(p); 
         },
         rules:_rules,
         messages:_messages,
         success:function(label){
-            label.removeClass("icon-validate-error").addClass("icon-validate-ok")
+            label.removeClass("tip-error").addClass("tip-right")
         }
     });
 
